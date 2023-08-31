@@ -4,7 +4,7 @@ export function Footer() {
       <ul className="flex gap-4 justify-center">
         <li>
           <a
-            href="https://twitter.com/anurag__roy"
+            href="https://twitter.com/mrinalcs"
             target="_blank"
             className="text-gray-400 hover:text-gray-600"
             title="Contact me on Twitter"
@@ -19,7 +19,7 @@ export function Footer() {
         </li>
         <li>
           <a
-            href="https://github.com/anurag-roy/og.anuragroy.dev"
+            href="https://github.com/mrinalcs"
             target="_blank"
             className="text-gray-400 hover:text-gray-600"
             title="View source on GitHub"
@@ -34,7 +34,7 @@ export function Footer() {
         </li>
       </ul>
       <p className="mt-4 text-center text-sm text-gray-500 [&>a]:underline-offset-2 [&>a:hover]:text-primary-500">
-        © {new Date().getFullYear()} Anurag Roy. Built with{' '}
+        © {new Date().getFullYear()} Mrinal. Built with{' '}
         <a href="https://nextjs.org/" target="_blank">
           Next.js
         </a>{' '}
