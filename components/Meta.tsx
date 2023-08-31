@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 export function Meta() {
-  const siteUrl = 'https://og.anuragroy.dev';
+  const siteUrl = 'https://og.mrinal.tk';
   const title =
     'og.mrinal.tk';
   const description =
