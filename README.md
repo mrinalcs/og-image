@@ -25,7 +25,7 @@ Make sure you have the following installed before proceeding:
 #### 1. Clone this repo:
 
 ```sh
-git clone https://github.com/anurag-roy/og.anuragroy.dev.git
+git clone https://github.com/mrinalcs/og-image.git
 ```
 
 #### 2. Install dependencies
