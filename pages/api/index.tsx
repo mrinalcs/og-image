@@ -16,7 +16,7 @@ const getAloeVera = fetch(
 ).then((res) => res.arrayBuffer());
 
 export default async function handler(req: NextRequest) {
-  const DEFAULT_TITLE = 'Anurag Roy';
+  const DEFAULT_TITLE = 'Mrinal Sarkar';
   const DEFAULT_DESCRIPTION =
     'Full-stack developer and aspiring designer from Kolkata, India.';
   const DEFAULT_AVATAR = 'https://og.anuragroy.dev/memoji.png';
