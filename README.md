@@ -1,14 +1,4 @@
-<div align="center">
-
-<img src="https://pub-cb12f9144e314eec94d19801ea4a36ee.r2.dev/og-logo.png" width="140" />
-
-# og.anuragroy.dev
-
-OpenGraph Image Generator for [anuragroy.dev](https://anuragroy.dev) using `@vercel/og` and Vercel Edge functions.
-
-![preview](https://pub-cb12f9144e314eec94d19801ea4a36ee.r2.dev/og-ss.png)
-
-</div>
+ 
 
 ## Usage
 
@@ -83,14 +73,4 @@ Currently this can only be deployed on Vercel's Edge platform due to the depende
 - [Vercel edge functions](https://vercel.com/docs/concepts/functions/edge-functions)
 - [@vercel/og docs](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation/og-image-api)
 - [Next.js docs](https://nextjs.org/docs) (This project uses the Next's Pages Router)
-
-## Contact
-
-- [Twitter](https://twitter.com/anurag__roy)
-- [Email](mailto:anuragroy@duck.com)
-
-## License
-
-[MIT © 2023 Anurag Roy](/LICENSE)
-
-[^1]: The app uses this [Next.js plugin](https://www.npmjs.com/package/next-plugin-websocket) to maintain a WebSocket Server, which patches some files in `node_modules`. I have tried using `pnpm` but it does not work reliably. See other caveats [here](https://github.com/sam3d/next-plugin-websocket#caveats).
+ 
