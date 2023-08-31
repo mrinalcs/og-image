@@ -18,7 +18,7 @@ const getAloeVera = fetch(
 export default async function handler(req: NextRequest) {
   const DEFAULT_TITLE = 'Mrinal Sarkar';
   const DEFAULT_DESCRIPTION =
-    'Full-stack developer and aspiring designer from Kolkata, India.';
+    'Statistician, analyst and open source enthusiast from Kolkata, India.';
   const DEFAULT_AVATAR = 'https://og.anuragroy.dev/memoji.png';
   const DEFAULT_AUTHOR = 'anuragroy.dev';
   const DEFAULT_THEME = 'rose';
