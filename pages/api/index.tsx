@@ -6,7 +6,10 @@ export const config = {
 };
 
 // Helper function to decode query parameters
-function decodeQueryValue(value) {
+function decodeQueryValue(value: string | null): string {
+  if (value === null) {
+    return '';
+  }
   return decodeURIComponent(value.replace(/\+/g, ' '));
 }
 
@@ -28,7 +31,7 @@ export default async function handler(req: NextRequest) {
   const { searchParams } = new URL(req.url);
 
   // Helper function to get query parameter, handling both &amp; and &
-  function getQueryParam(paramName, defaultValue) {
+  function getQueryParam(paramName: string, defaultValue: string) {
     const value = searchParams.get(paramName);
     return value ? decodeQueryValue(value) : defaultValue;
   }
