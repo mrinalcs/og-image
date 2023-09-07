@@ -5,13 +5,15 @@ export const config = {
   runtime: 'edge',
 };
 
-// Helper function to decode query parameters
-function decodeQueryValue(value: string | null): string {
-  if (value === null) {
-    return '';
-  }
-  return decodeURIComponent(value.replace(/\+/g, ' '));
-}
+const getSatoshi = fetch(
+  new URL('../../assets/Satoshi.ttf', import.meta.url)
+).then((res) => res.arrayBuffer());
+const getClashDisplay = fetch(
+  new URL('../../assets/ClashDisplay.ttf', import.meta.url)
+).then((res) => res.arrayBuffer());
+const getAloeVera = fetch(
+  new URL('../../assets/AloeVera.ttf', import.meta.url)
+).then((res) => res.arrayBuffer());
 
 export default async function handler(req: NextRequest) {
   const DEFAULT_TITLE = 'Mrinal Chandra Sarkar';
@@ -27,22 +29,30 @@ export default async function handler(req: NextRequest) {
     getAloeVera,
   ]);
 
-  // Use the original URL to decode query parameters
-  const { searchParams } = new URL(req.url);
-
-  // Helper function to get query parameter, handling both &amp; and &
-  function getQueryParam(paramName: string, defaultValue: string) {
-    const value = searchParams.get(paramName);
-    return value ? decodeQueryValue(value) : defaultValue;
-  }
+  const { searchParams } = req.nextUrl;
 
   // get content from query params
-  const title = getQueryParam('title', DEFAULT_TITLE);
-  const description = getQueryParam('description', DEFAULT_DESCRIPTION);
-  const avatar = getQueryParam('avatar', DEFAULT_AVATAR);
-  const author = getQueryParam('author', DEFAULT_AUTHOR);
-  const logo = getQueryParam('logo', null);
-  const theme = getQueryParam('theme', DEFAULT_THEME);
+  const title = searchParams.has('title')
+    ? searchParams.get('title')
+    : DEFAULT_TITLE;
+
+  const description = searchParams.has('description')
+    ? searchParams.get('description')
+    : DEFAULT_DESCRIPTION;
+
+  const avatar = searchParams.has('avatar')
+    ? searchParams.get('avatar')!
+    : DEFAULT_AVATAR;
+
+  const author = searchParams.has('author')
+    ? searchParams.get('author')
+    : DEFAULT_AUTHOR;
+
+  const logo = searchParams.has('logo') ? searchParams.get('logo') : null;
+
+  const theme = searchParams.has('theme')
+    ? searchParams.get('theme')
+    : DEFAULT_THEME;
 
   return new ImageResponse(
     (
